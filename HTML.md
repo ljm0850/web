@@ -137,3 +137,12 @@
 - __hidden__ 사용자에게 보이지 않는 input
 
 - 이 나중에 적혀있기에 green만 적용
+
+###### 그외
+
+```html
+<div>
+    <input type="text" name="hello" id ="hello" placeholder='입력전에 회색글씨로 표기'>
+</div>
+```
+
