@@ -246,3 +246,124 @@ padding: 5px;
   - bottom
   - left
   - right
+
+
+
+#### nth-child() & nth-of-type()
+
+- __nth-child()__는 모든 요소를 포함해서 순서를 카운팅
+- __nth-of-type()__는 해당하는 타입에서부터 카운팅
+- ()안에 odd , even을 넣어 홀짝 가능
+
+```css
+/* 목록의 두 번째 <li> 선택 */
+li:nth-child(2) {
+  color: lime;
+}
+```
+
+
+
+-----
+
+
+
+## Float
+
+- 박스를 왼쪽(오른쪽)으로 이동시켜 텍스트를 포함한 인라인 요소들이 박스를 둘러싸게 함
+- 요소가 Normal flow를 벗어나도록 함
+- flexbox, Grid ...등이 나오기 전에 주로 사용
+
+#### Float 속성
+
+- none : 기본값
+- left : 요소를 왼쪽으로
+- right : 요소를 오른쪽으로
+
+```html
+<body>
+    <div class="box left">
+        float left
+    </div>
+</body>
+```
+
+```css
+.box{with:100px;
+    heigh:100px;
+    border:3px solid black;
+    color: blue;
+    /* ect.. */
+}
+.left {
+    float: left;
+}
+```
+
+### Clearing Float
+
+- Float한 이후에 그 뒤 요소들이 Float가 적용되지 않기 위해 사용 
+
+- `::after` 선택한 요소 맨 마지막에 자식 요소를 생성하여 정리하기 위해 사용(부모 요소에 사용하여 처리)
+
+  ```css
+  .clearfix::after {
+      content : "";
+      display : block;
+      clear : both;
+  }
+  ```
+
+  
+
+## Flexbox
+
+- 행과 열 형태로 아이템들을 배치하는 1차원 레이아웃 모델
+
+```css
+.flex-container {
+    display : flex;
+    /* display: inline-flex; */
+}
+```
+
+- Flex Container 와 Flex Item으로 구성
+
+### Flex 속성
+
+#### 배치설정
+
+- flex-direction : Main axis 방향 설정
+
+  - flex-direction : row;
+    - x축 방향으로 Item 배열
+
+  - flex-direction: column;
+    - y축 방향으로 Item 배열
+
+- flex-wrap
+  - 아이템이 컨테이너를 벗어나는 경우 해당 영역 내에 배치되도록 설정
+  - x축에서 넘어가면 y축을 한칸 늘려서 작동
+
+#### 공간 나누기
+
+- justify-content (main axis) & align-content (cross axis)
+  - start
+  - end
+  - center
+  - space-between : items 사이 간격을 균일하게
+  - space-around : items을 둘러싼 영역을 균일하게
+  - space-evenly : 전체 영역에서 아이템 간격을 균일하게
+
+#### 정렬
+
+- align-items (모든 아이템을 cross axis 기준으로) & align-self (개별 아이템)
+  - stretch
+  - flex-start
+  - flex-end
+  - center
+  - baseline : 텍스트 baseline에 기준선을 맞춤
+
+#### 배치 순서 변경시
+
+- order-숫자
