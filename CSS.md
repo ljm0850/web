@@ -366,4 +366,4 @@ li:nth-child(2) {
 
 #### 배치 순서 변경시
 
-- order-숫자
+- order:숫자
