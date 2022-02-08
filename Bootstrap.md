@@ -116,3 +116,11 @@ Bootstrap
 ```
 
 - breakpoints와 함께 디자인 하는 경우가 많음
+
+- offset
+
+  - ```html
+    class ="offset-4 col-4"
+    ```
+
+  - 선언된 클래스 앞부분에 offset이 형성이 됨

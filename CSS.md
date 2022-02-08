@@ -227,17 +227,17 @@ padding: 5px;
 - __static__: 모든 태그의 기본값(기준 위치)
   - 배치 순서에 따름
   - 부모 요소 내에서 배치시 부모 요소 기준으로 배치
-
 - __relative__ : 상대위치
   - 자기 자신의 static 위치를 기준으로 이동
   - 레이아웃에서 차지하는 공간은 변하지 않음
-
 - __absolute__ : 절대위치
   - 부모/조상 요소를 기준으로 이동
   - 레이아웃에서 차지하는 공간이 변함
-
 - __fixed__ : 고정위치
   - 부모 요소 관계 없이 viewport 기준으로 이동(스크롤 시에도 같은곳에 위치)
+- **sticky**: 설정한 위치에 도달하기 전까지는 static처럼 행동, 도달 이후엔 fixed처럼 행동
+  - 화면 최상단에 배치시 fixed를 사용할 경우 요소가 최상단의 일부를 가리게 되는 상황이 발생할때 유용
+
 
 
 
@@ -345,11 +345,20 @@ li:nth-child(2) {
   - 아이템이 컨테이너를 벗어나는 경우 해당 영역 내에 배치되도록 설정
   - x축에서 넘어가면 y축을 한칸 늘려서 작동
 
+- flex-flow : direction과 wrap를 한번에 설정
+
+  - ```css
+    flex-flow : row wrap;
+    ```
+
+    
+
+
 #### 공간 나누기
 
 - justify-content (main axis) & align-content (cross axis)
-  - start
-  - end
+  - start or flex-start
+  - end or flex-end
   - center
   - space-between : items 사이 간격을 균일하게
   - space-around : items을 둘러싼 영역을 균일하게
