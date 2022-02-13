@@ -357,8 +357,8 @@ li:nth-child(2) {
 #### 공간 나누기
 
 - justify-content (main axis) & align-content (cross axis)
-  - start or flex-start
-  - end or flex-end
+  - flex-start
+  - flex-end
   - center
   - space-between : items 사이 간격을 균일하게
   - space-around : items을 둘러싼 영역을 균일하게
@@ -368,8 +368,8 @@ li:nth-child(2) {
 
 - align-items (모든 아이템을 cross axis 기준으로) & align-self (개별 아이템)
   - stretch
-  - flex-start
-  - flex-end
+  - start
+  - end
   - center
   - baseline : 텍스트 baseline에 기준선을 맞춤
 
